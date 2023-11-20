@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="assets\css\styles4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cagliostro&family=Kings&family=Rosarivo:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+<body>
+
+
+    <div class="menu">
+        <div class="menu-item">
+            <!-- Accesos a otros apartados -->
+            <span class="menu-link" data-text="Inicio" onclick="redirect('Index.html')">Inicio</span>
+            <span class="menu-link" data-text="Info" onclick="redirect('Info.html')">Sobre mí</span>
+            <span class="menu-link" data-text="Habilidades" onclick="redirect('Habilidades.html')">Habilidades</span>
+            <span class="menu-link" data-text="Proyectos" onclick="redirect('Proyectos.html')">Proyectos</span>
+            <span class="menu-link" data-text="Contactos" onclick="redirect('Contactos.html')">Contactos</span>
+        </div>
+    </div>
+    
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+
+<div class="contenedor-imagen">
+    <img src="/Portafolio-Page/assets/img/img6.png" alt="Imagen de Portada" class="img1">
+    <div class="superposicion-texto">
+        <h1 class="t1">Proyectos</h1>
+
+        
+        <div class="carousel-container">
+            <div class="carousel">
+                <div><img src="/Portafolio-Page/assets/img/thomas.PNG" alt="Imagen 1"></div>
+                <div><img src="/Portafolio-Page/assets/img/alan.PNG" alt="Imagen 2"></div>
+                <div><img src="/Portafolio-Page/assets/img/moda.PNG" alt="Imagen 3"></div>
+                <div><img src="/Portafolio-Page/assets/img/rock.PNG" alt="Imagen 4"></div>
+                <!-- Agrega más imágenes según sea necesario -->
+            </div>
+            <div class="buttons">
+                <button id="webButton" onclick="goToWebsite()" target="_blank">Ir al Host Web</button>
+                <button id="githubButton" onclick="goToGitHub()" target="_blank">Ir al Repositorio GitHub</button>
+            </div>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            // Enlaces asociados a cada imagen
+            const imageLinks = [
+                { web: 'https://edgalban2003.github.io/Thomas-Edison-Page/', github: 'https://github.com/edgalban2003/Thomas-Edison-Page' },
+                { web: 'https://edgalban2003.github.io/Alan-Turing-Page/', github: 'https://github.com/edgalban2003/Alan-Turing-Page' },
+                { web: 'https://edgalban2003.github.io/Retro-Fashion-Page/', github: 'https://github.com/edgalban2003/Retro-Fashion-Page' },
+                { web: 'https://edgalban2003.github.io/RockNRollRising-Page/', github: 'https://github.com/edgalban2003/RockNRollRising-Page' }
+            ];
+        
+            // Inicializar el carrusel
+            const slick = $('.carousel').slick({
+                arrows: true, // Activar las flechas de navegación
+                adaptiveHeight: true,
+                infinite: false,
+                speed: 300,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true,
+                            dots: true
+                        }
+                    }
+                ]
+            });
+        
+            // Actualizar enlaces al cambiar de imagen
+            updateButtons(0);
+        
+            // Evento al cambiar de imagen
+            $('.carousel').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                updateButtons(nextSlide);
+            });
+        
+            function updateButtons(currentSlide) {
+                const webButton = document.getElementById('webButton');
+                const githubButton = document.getElementById('githubButton');
+        
+                webButton.href = imageLinks[currentSlide].web;
+                githubButton.href = imageLinks[currentSlide].github;
+            }
+        
+            function goToWebsite() {
+                window.open(document.getElementById('webButton').href, '_blank');
+            }
+        
+            function goToGitHub() {
+                window.open(document.getElementById('githubButton').href, '_blank');
+            }
+        </script>
+
+
+    </div>
+</div>
+
+
+<div class="contenedor-imagen2">
+    <img src="/Portafolio-Page/assets/img/img7.png" alt="Imagen de Portada" class="img1">
+    <div class="superposicion-texto2">
+        
+        <h1 class="t4">Todos los derechos</h1>
+        <h1 class="t4">Reservados</h1>
+        
+    </div>
+</div>
+
+</body>
+</html>

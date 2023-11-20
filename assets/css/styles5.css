@@ -1,0 +1,141 @@
+/* Estilos CSS para el cuerpo y el fondo */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/Portafolio-Page/assets/img/img8.png');
+    background-size: cover; /* Ajusta según tus necesidades */
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: center; 
+    min-height: 100vh; /* Fondo del cuerpo */
+}
+
+/* Estilos CSS para el color de fondo del menú */
+.menu {
+    background-color: rgba(0, 0, 0, 0); /* Fondo del menú */
+    color: rgb(255, 255, 255);
+    top: 0;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 1;
+    align-items: center; /* Alineación del menú */
+}
+
+/* Estilos CSS para los elementos del menú */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos CSS para las imágenes del menú */
+.menu-item img {
+    width: 19%; 
+    border-radius: 5%;
+}
+
+
+/* Estilos CSS para el espacio entre elementos del menú */
+.menu-item span {
+    margin: 0 1%;
+    font-family: 'Kanit', sans-serif;
+    font-size: 3.4em;
+}
+
+/* Estilos CSS para los enlaces del menú */
+.menu-link {
+    position: relative; 
+    text-align: right;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.6em;
+}
+
+/* Estilos CSS para las animaciones de los enlaces del menú */
+.menu-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.7s;
+}
+
+/* Animación al pasar el cursor sobre los enlaces */
+.menu-link:hover::after {
+    transform: scaleX(1); 
+}
+
+
+/* Estilos CSS para los titulos */
+.tt {
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 5%;
+    margin-top: 4%;
+}
+.tt1 {
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+.tt2 {
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 5%;
+    margin-top: 7%;
+}
+
+/* Estilos CSS para los parrafos */
+.pr {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 3%;
+    color: rgb(151, 151, 18);
+}
+
+.tlfn{
+    color: #000;
+}
+
+/* Estilos adicionales para los enlaces dentro de la clase "redes" */
+.redes a {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 10px; /* Ajusta según tus necesidades */
+    padding: 5%;
+}
+
+/* Estilos adicionales para la sección de contacto e información */
+.contact-info {
+    margin-top: 40%;
+    margin-bottom: 10%;
+    background-color: #ffffff;
+    border-radius: 1.5em;
+    padding: 5%;
+    box-shadow: 0 0 10px rgb(151, 151, 18);
+    width: 100%;
+    max-width: 80em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+/* Estilos adicionales para los párrafos dentro de la sección de contacto e información */
+.contact-info p {
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
+}
+
+/* Estilos adicionales para los enlaces dentro de los párrafos de la sección de contacto e información */
+.contact-info a {
+    color: #000; /* Cambia el color del enlace según tus preferencias */
+}

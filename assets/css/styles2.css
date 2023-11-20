@@ -1,0 +1,151 @@
+/* Estilos CSS para el cuerpo y el fondo */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    display: grid;
+    justify-content: center; 
+    min-height: 100vh; /* Fondo del cuerpo */
+}
+
+/* Estilos CSS para el color de fondo del menú */
+.menu {
+    background-color: rgba(0, 0, 0, 0); /* Fondo del menú */
+    color: rgb(255, 255, 255);
+    top: 0;
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    z-index: 1;
+    align-items: center; /* Alineación del menú */
+}
+
+/* Estilos CSS para los elementos del menú */
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos CSS para las imágenes del menú */
+.menu-item img {
+    width: 19%; 
+    border-radius: 5%;
+}
+
+
+/* Estilos CSS para el espacio entre elementos del menú */
+.menu-item span {
+    margin: 0 1%;
+    font-family: 'Kanit', sans-serif;
+    font-size: 3.4em;
+}
+
+/* Estilos CSS para los enlaces del menú */
+.menu-link {
+    position: relative; 
+    text-align: right;
+    cursor: pointer;
+    font-family: 'Kanit', sans-serif;
+    font-size: 2.6em;
+}
+
+/* Estilos CSS para las animaciones de los enlaces del menú */
+.menu-link::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.2em;
+    background-color: rgb(255, 255, 255);
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.7s;
+}
+
+/* Animación al pasar el cursor sobre los enlaces */
+.menu-link:hover::after {
+    transform: scaleX(1); 
+}
+
+
+/* CSS para el primer contenedor */
+.contenedor-imagen {
+    position: relative;
+}
+
+.img1 {
+    height: 1310px;
+    width: 100%;
+    z-index: 0;
+
+}
+
+.superposicion-texto {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+.t1 {
+    font-size: 5em;
+    font-family: 'Cagliostro', sans-serif;
+    font-family: 'Kings';
+    font-family: 'Rosarivo';
+    font-style: italic;
+    text-align: center;
+    color: rgb(151, 151, 18);
+}
+
+.t2 {
+    font-size: 3em;
+    font-family: 'Cagliostro', sans-serif; 
+    text-align: center;
+}
+
+
+/* CSS para el segundo contenedor */
+.contenedor-imagen2 {
+    position: relative;
+}
+
+.img1 {
+    height: 1310px;
+    width: 100%;
+    z-index: 0;
+
+}
+
+.superposicion-texto2 {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+.t3 {
+    font-size: 5em;
+    font-family: 'Cagliostro', sans-serif;
+    font-family: 'Kings';
+    font-family: 'Rosarivo';
+    font-style: italic;
+    text-align: left;
+    color: rgb(151, 151, 18);
+}
+
+.t4 {
+    font-size: 3em;
+    font-family: 'Cagliostro', sans-serif; 
+    text-align: left;
+}
